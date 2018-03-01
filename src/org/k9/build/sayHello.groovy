@@ -1,6 +1,8 @@
-package org.k9.build
-def call(String name = 'human') {
-    // Any valid steps can be called from this code, just like in other
-    // Scripted Pipeline
-    echo "Hello, ${name}."
+package org.k9.build 
+class Utilities implements Serializable {
+  def steps
+  Utilities(steps) {this.steps = steps}
+  def mvn(args) {
+    steps.sh "${steps.tool 'Maven'}/bin/mvn -o ${args}"
+  }
 }
