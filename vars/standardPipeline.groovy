@@ -9,10 +9,7 @@ def call(body) {
             // Clean workspace before doing anything
             deleteDir()
 
-            try {
-                stage ('Clone') {
-                    checkout scm
-                }
+               try {
                 stage ('Build') {
                     sh "echo 'building ${config.projectName} ...'"
                 }
