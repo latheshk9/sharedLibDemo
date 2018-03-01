@@ -1,8 +1,5 @@
 
 def call(body) {
-
-        def quotes = ['Make it so', 'Tea. Earl Grey. Hot.', 'Engage']
-        println quotes.get(new Random().nextInt(quotes.size()))
         def config = [:]
         body.resolveStrategy = Closure.DELEGATE_FIRST
         body.delegate = config
