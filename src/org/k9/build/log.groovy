@@ -1,3 +1,5 @@
+package org.k9.build
+
 def info(message) {
     echo "INFO: ${message}"
 }
